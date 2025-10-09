@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adicionais</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #5e113a;
+    padding: 20px;
+    text-align: center;
+  }
+
+  h1 {
+    color: #5e113a;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    color: #5e113a;
+    margin-bottom: 15px;
+  }
+
+  .adicionais-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .adicional {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 200px;
+    max-width: 90%;
+    text-align: left;
+  }
+
+  .adicional h3 {
+    margin-bottom: 10px;
+    color: #5e113a;
+    text-align: center;
+  }
+
+  .adicional label {
+    display: block;
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #555;
+    cursor: pointer;
+  }
+
+  /* Novo estilo do botão */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #5e113a, #9b2c66);
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn:hover {
+    background: linear-gradient(135deg, #7a1b52, #b13c7a);
+    transform: scale(1.05);
+  }
+</style>
+</head>
+<body>
+  <h1>Monte seu Açaí</h1>
+  <form action="pagamento.html" method="get">
+    <section id="adicionais">
+      <h2>Escolha seus Adicionais</h2>
+      <div class="adicionais-list">
+        
+        <div class="adicional">
+          <h3>Frutas</h3>
+          <label><input type="checkbox" name="frutas" value="Morango"> Morango</label>
+          <label><input type="checkbox" name="frutas" value="Banana"> Banana</label>
+          <label><input type="checkbox" name="frutas" value="Kiwi"> Kiwi</label>
+          <label><input type="checkbox" name="frutas" value="Manga"> Manga</label>
+          <label><input type="checkbox" name="frutas" value="Abacaxi"> Abacaxi</label>
+        </div>
+
+        <div class="adicional">
+          <h3>Coberturas</h3>
+          <label><input type="checkbox" name="coberturas" value="Chocolate"> Chocolate</label>
+          <label><input type="checkbox" name="coberturas" value="Leite condensado"> Leite condensado</label>
+          <label><input type="checkbox" name="coberturas" value="Caramelo"> Caramelo</label>
+          <label><input type="checkbox" name="coberturas" value="Brigadeiro"> Brigadeiro</label>
+        </div>
+
+        <div class="adicional">
+          <h3>Granulados e Crocantes</h3>
+          <label><input type="checkbox" name="granulados" value="Granola"> Granola</label>
+          <label><input type="checkbox" name="granulados" value="Castanha"> Castanha</label>
+          <label><input type="checkbox" name="granulados" value="Amendoim"> Amendoim</label>
+          <label><input type="checkbox" name="granulados" value="Bolacha triturada"> Bolacha triturada</label>
+        </div>
+
+        <div class="adicional">
+          <h3>Extras Especiais</h3>
+          <label><input type="checkbox" name="extras" value="Leite Ninho"> Leite Ninho</label>
+          <label><input type="checkbox" name="extras" value="Nutella"> Nutella</label>
+          <label><input type="checkbox" name="extras" value="Marshmallow"> Marshmallow</label>
+        </div>
+
+      </div>
+      <div class="actions">
+        <button type="submit" class="btn">Confirmar Pedido</button>
+      </div>
+    </section>
+  </form>
+</body>
+</html>
