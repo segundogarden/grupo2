@@ -3,76 +3,108 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Adicionais</title>
+<title>Monte seu Açaí - Adicionais</title>
 <style>
   body {
-    font-family: Arial, sans-serif;
-    background-color: #5e113a;
-    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at 20% 30%, #3b0066, #0b0013 80%);
+    color: white;
+    padding: 30px;
     text-align: center;
+    overflow-x: hidden;
   }
 
   h1 {
-    color: #5e113a;
+    color: #d9aaff;
+    text-shadow: 0 0 12px #b56cff;
     margin-bottom: 10px;
+    font-size: 2.5em;
   }
 
   h2 {
-    color: #5e113a;
-    margin-bottom: 15px;
+    color: #cfa9ff;
+    margin-bottom: 25px;
+    font-size: 1.5em;
   }
 
+  /* Container geral dos cards */
   .adicionais-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
   }
 
+  /* Estilo dos cards */
   .adicional {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    width: 200px;
-    max-width: 90%;
-    text-align: left;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 0 15px rgba(255,255,255,0.08);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+  }
+
+  .adicional:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(181,108,255,0.4);
   }
 
   .adicional h3 {
-    margin-bottom: 10px;
-    color: #5e113a;
+    color: #fff;
+    font-size: 1.3em;
+    margin-bottom: 12px;
     text-align: center;
+    text-shadow: 0 0 6px #b56cff;
   }
 
   .adicional label {
     display: block;
-    margin: 5px 0;
-    font-size: 0.9em;
-    color: #555;
+    margin: 6px 0;
+    font-size: 0.95em;
+    color: #ddd;
     cursor: pointer;
   }
 
-  /* Novo estilo do botão */
+  .adicional input[type="checkbox"] {
+    accent-color: #b56cff;
+    transform: scale(1.2);
+    margin-right: 6px;
+  }
+
+  /* Botão estilizado */
   .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background: linear-gradient(135deg, #5e113a, #9b2c66);
-    color: #fff;
-    font-size: 1em;
-    font-weight: bold;
+    margin-top: 30px;
+    padding: 14px 35px;
+    background: linear-gradient(135deg, #b56cff, #6a00b5);
+    color: white;
     border: none;
     border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: bold;
     cursor: pointer;
+    box-shadow: 0 0 20px rgba(181, 108, 255, 0.5);
     transition: all 0.3s ease;
   }
 
   .btn:hover {
-    background: linear-gradient(135deg, #7a1b52, #b13c7a);
-    transform: scale(1.05);
+    transform: scale(1.08);
+    box-shadow: 0 0 30px rgba(181,108,255,0.8);
+  }
+
+  /* Fundo com pequenas estrelas */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+    opacity: 0.4;
+    pointer-events: none;
   }
 </style>
 </head>
@@ -81,8 +113,8 @@
   <form action="pagamento.html" method="get">
     <section id="adicionais">
       <h2>Escolha seus Adicionais</h2>
+
       <div class="adicionais-list">
-        
         <div class="adicional">
           <h3>Frutas</h3>
           <label><input type="checkbox" name="frutas" value="Morango"> Morango</label>
@@ -114,11 +146,9 @@
           <label><input type="checkbox" name="extras" value="Nutella"> Nutella</label>
           <label><input type="checkbox" name="extras" value="Marshmallow"> Marshmallow</label>
         </div>
+      </div>
 
-      </div>
-      <div class="actions">
-        <button type="submit" class="btn">Confirmar Pedido</button>
-      </div>
+      <button type="submit" class="btn">Confirmar Pedido</button>
     </section>
   </form>
 </body>
